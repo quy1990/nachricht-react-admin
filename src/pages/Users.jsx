@@ -1,17 +1,13 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
+import axios from '../components/axios'
 import Table from '../components/table/Table'
-
-import customerList from '../assets/JsonData/customers-list.json'
 
 const customerTableHead = [
     '',
-    'name',
-    'email',
-    'phone',
-    'total orders',
-    'total spend',
-    'location'
+    'title',
+    'body',
+    'author',
+    'category'
 ]
 
 const renderHead = (item, index) => <th key={index}>{item}</th>
@@ -19,16 +15,27 @@ const renderHead = (item, index) => <th key={index}>{item}</th>
 const renderBody = (item, index) => (
     <tr key={index}>
         <td>{item.id}</td>
-        <td>{item.name}</td>
-        <td>{item.email}</td>
-        <td>{item.phone}</td>
-        <td>{item.total_orders}</td>
-        <td>{item.total_spend}</td>
-        <td>{item.location}</td>
+        <td>{item.title}</td>
+        <td>{item.body}</td>
+        <td>{item.author.user_name}</td>
+        <td>{item.category.user_name}</td>
     </tr>
 )
 
 const Users = () => {
+    const [customers, setCustomers] = useState([]);
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await axios(
+                '/posts',
+            );
+
+            setCustomers(result.data.data);
+        };
+
+        fetchData();
+    }, []);
+
     return (
         <div>
             <h2 className="page-header">
@@ -42,7 +49,7 @@ const Users = () => {
                                 limit='10'
                                 headData={customerTableHead}
                                 renderHead={(item, index) => renderHead(item, index)}
-                                bodyData={customerList}
+                                bodyData={customers}
                                 renderBody={(item, index) => renderBody(item, index)}
                             />
                         </div>
