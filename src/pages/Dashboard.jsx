@@ -1,18 +1,17 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 import Chart from 'react-apexcharts'
 
-import { useSelector } from 'react-redux'
+import {useSelector} from 'react-redux'
 
 import StatusCard from '../components/status-card/StatusCard'
-
-import Table from '../components/table/Table'
 
 import Badge from '../components/badge/Badge'
 
 import statusCards from '../assets/JsonData/status-card-data.json'
+import DashboardTable from "../components/table/DashboardTable";
 
 const chartOptions = {
     series: [{
@@ -80,11 +79,11 @@ const topCustomers = {
     ]
 }
 
-const renderCusomerHead = (item, index) => (
+const renderCustomerHead = (item, index) => (
     <th key={index}>{item}</th>
 )
 
-const renderCusomerBody = (item, index) => (
+const renderCustomerBody = (item, index) => (
     <tr key={index}>
         <td>{item.username}</td>
         <td>{item.order}</td>
@@ -208,11 +207,11 @@ const Dashboard = () => {
                             <h3>top customers</h3>
                         </div>
                         <div className="card__body">
-                            <Table
+                            <DashboardTable
                                 headData={topCustomers.head}
-                                renderHead={(item, index) => renderCusomerHead(item, index)}
+                                renderHead={(item, index) => renderCustomerHead(item, index)}
                                 bodyData={topCustomers.body}
-                                renderBody={(item, index) => renderCusomerBody(item, index)}
+                                renderBody={(item, index) => renderCustomerBody(item, index)}
                             />
                         </div>
                         <div className="card__footer">
@@ -226,7 +225,7 @@ const Dashboard = () => {
                             <h3>latest orders</h3>
                         </div>
                         <div className="card__body">
-                            <Table
+                            <DashboardTable
                                 headData={latestOrders.header}
                                 renderHead={(item, index) => renderOrderHead(item, index)}
                                 bodyData={latestOrders.body}
