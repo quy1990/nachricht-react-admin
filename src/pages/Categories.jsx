@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react'
-import axios from '../components/axios'
+import React from 'react'
 import Table from '../components/table/Table'
 
 const customerTableHead = [
@@ -21,20 +20,8 @@ const renderBody = (item, index) => (
 )
 
 const Users = () => {
-    const [categories, setCategories] = useState([]);
-    const [isLoad, setIsLoad] = useState(false);
 
-    const fetchData = async () => {
-        const request = await axios.get("/categories");
-        setCategories([...request.data.data]);
-    }
-
-    useEffect(() => {
-        if (!isLoad) {
-            fetchData();
-            setIsLoad(true);
-        }
-    }, [categories]);
+    let url = "/categories";
 
     return (
         <div>
@@ -46,14 +33,13 @@ const Users = () => {
                     <div className="card">
                         <div className="card__body">
                             {
-                                categories && categories.length > 0 ? (<Table
-                                        limit='10'
-                                        headData={customerTableHead}
-                                        renderHead={(item, index) => renderHead(item, index)}
-                                        bodyData={categories}
-                                        renderBody={(item, index) => renderBody(item, index)}
-                                    />
-                                ) : null
+                                <Table
+                                    limit='10'
+                                    headData={customerTableHead}
+                                    renderHead={(item, index) => renderHead(item, index)}
+                                    url={url}
+                                    renderBody={(item, index) => renderBody(item, index)}
+                                />
                             }
                         </div>
                     </div>
