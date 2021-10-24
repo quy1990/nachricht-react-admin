@@ -6,7 +6,7 @@ const customerTableHead = [
     '',
     'name',
     'email',
-    'subscribe_count',
+    'post_count',
     "actions"
 ]
 
@@ -17,7 +17,7 @@ const renderBody = (item, index) => (
         <td>{item.id}</td>
         <td>{item.name}</td>
         <td>{item.email}</td>
-        <td>{item.subscribe_count}</td>
+        <td>{item.post_count}</td>
         <td>action1/action2</td>
     </tr>
 )

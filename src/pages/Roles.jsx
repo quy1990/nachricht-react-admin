@@ -5,7 +5,6 @@ import Table from '../components/table/Table'
 const customerTableHead = [
     '',
     'name',
-    'subscribe_count',
     "actions"
 ]
 
@@ -15,7 +14,6 @@ const renderBody = (item, index) => (
     <tr key={index}>
         <td>{item.id}</td>
         <td>{item.name}</td>
-        <td>{item.subscribe_count}</td>
         <td>action1/action2</td>
     </tr>
 )
