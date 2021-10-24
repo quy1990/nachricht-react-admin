@@ -31,7 +31,9 @@ const Sidebar = props => {
     return (
         <div className='sidebar'>
             <div className="sidebar__logo">
-                <img src={logo} alt="company logo" />
+                <Link to="/">
+                    <b style={{fontSize: "xxx-large;"}}>Admin Panel</b>
+                </Link>
             </div>
             {
                 sidebar_items.map((item, index) => (
