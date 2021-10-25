@@ -1,7 +1,7 @@
 import React from 'react'
 import Table from '../components/table/Table'
 
-const customerTableHead = [
+const postTableHead = [
     '',
     'title',
     'body',
@@ -37,7 +37,7 @@ const Users = () => {
                             {
                                 <Table
                                     limit='10'
-                                    headData={customerTableHead}
+                                    headData={postTableHead}
                                     renderHead={(item, index) => renderHead(item, index)}
                                     url={url}
                                     renderBody={(item, index) => renderBody(item, index)}
