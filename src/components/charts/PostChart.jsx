@@ -7,10 +7,10 @@ const PostChart = props => {
 
     const chartOptions = {
         series: [{
-            name: 'Online Customers',
+            name: 'New Users',
             data: [40, 70, 20, 90, 36, 80, 30, 91, 60]
         }, {
-            name: 'Store Customers',
+            name: 'New Posts',
             data: [40, 30, 70, 80, 40, 16, 40, 20, 51, 10]
         }],
         options: {
@@ -31,7 +31,7 @@ const PostChart = props => {
                 position: 'top'
             },
             grid: {
-                show: false
+                show: true
             }
         }
     }
