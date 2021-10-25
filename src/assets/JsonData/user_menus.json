@@ -4,8 +4,8 @@
         "content": "Profile"
     },
     {
-        "icon": "bx bx-wallet-alt",
-        "content": "My Wallet"
+        "icon": "bx bxs-detail",
+        "content": "My Posts"
     },
     {
         "icon": "bx bx-cog",

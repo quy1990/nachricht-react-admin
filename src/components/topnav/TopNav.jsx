@@ -2,7 +2,7 @@ import React from 'react'
 
 import './topnav.css'
 
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 import Dropdown from '../dropdown/Dropdown'
 
@@ -29,7 +29,7 @@ const renderNotificationItem = (item, index) => (
 const renderUserToggle = (user) => (
     <div className="topnav__right-user">
         <div className="topnav__right-user__image">
-            <img src={user.image} alt="" />
+            <img src={user.image} alt=""/>
         </div>
         <div className="topnav__right-user__name">
             {user.display_name}
@@ -37,7 +37,7 @@ const renderUserToggle = (user) => (
     </div>
 )
 
-const renderUserMenu =(item, index) => (
+const renderUserMenu = (item, index) => (
     <Link to='/' key={index}>
         <div className="notification-item">
             <i className={item.icon}></i>
@@ -49,8 +49,8 @@ const renderUserMenu =(item, index) => (
 const Topnav = () => {
     return (
         <div className='topnav'>
-            <div className="topnav__search">
-                <input type="text" placeholder='Search here...' />
+            <div className="topnav__search col-3">
+                <input type="text" placeholder='Search here...'/>
                 <i className='bx bx-search'></i>
             </div>
             <div className="topnav__right">
