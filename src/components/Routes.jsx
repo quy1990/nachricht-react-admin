@@ -8,6 +8,7 @@ import Posts from '../pages/Posts'
 import Categories from '../pages/Categories'
 import Tags from '../pages/Tags'
 import Roles from '../pages/Roles'
+import Comments from '../pages/Comments'
 
 const Routes = () => {
     return (
@@ -18,6 +19,7 @@ const Routes = () => {
             <Route path='/categories' component={Categories}/>
             <Route path='/tags' component={Tags}/>
             <Route path='/roles' component={Roles}/>
+            <Route path='/comments' component={Comments}/>
         </Switch>
     )
 }

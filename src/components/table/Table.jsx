@@ -9,14 +9,12 @@ const Table = props => {
     const fetchData = async () => {
         const request = await axios.get(url);
         setBodyData(request.data);
-
     }
 
     useEffect(() => {
         if (!isLoad) {
             fetchData();
             setIsLoad(true);
-            console.log(bodyData.data);
         }
     }, [bodyData.data, url]);
 

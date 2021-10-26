@@ -23,7 +23,7 @@ const renderBody = (item, index) => (
     </tr>
 )
 
-const Users = () => {
+const Posts = () => {
     let url = "/posts";
     return (
         <div>
@@ -51,4 +51,4 @@ const Users = () => {
     )
 }
 
-export default Users
+export default Posts

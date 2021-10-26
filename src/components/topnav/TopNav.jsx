@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 import './topnav.css'
 
@@ -13,6 +13,7 @@ import notifications from '../../assets/JsonData/notification.json'
 import user_image from '../../assets/images/tuat.png'
 
 import user_menu from '../../assets/JsonData/user_menus.json'
+import axios from "../axios";
 
 const curr_user = {
     display_name: 'Tuat Tran',
@@ -46,7 +47,22 @@ const renderUserMenu = (item, index) => (
     </Link>
 )
 
-const Topnav = () => {
+const Topnav = props => {
+    let url = '/latest-comments';
+    const [notifications, setNotifications] = useState([]);
+    const [isLoad, setIsLoad] = useState(false);
+    const fetchData = async () => {
+        const request = await axios.get(url);
+        setNotifications(request.data);
+    }
+
+    useEffect(() => {
+        if (!isLoad) {
+            fetchData();
+            setIsLoad(true);
+        }
+    }, [notifications.data, url]);
+
     return (
         <div className='topnav'>
             <div className="topnav__search col-3">
@@ -63,13 +79,15 @@ const Topnav = () => {
                     />
                 </div>
                 <div className="topnav__right-item">
-                    <Dropdown
-                        icon='bx bx-bell'
-                        badge='12'
-                        contentData={notifications}
-                        renderItems={(item, index) => renderNotificationItem(item, index)}
-                        renderFooter={() => <Link to='/'>View All</Link>}
-                    />
+                    {
+                        notifications.length > 0 &&  <Dropdown
+                            icon='bx bx-bell'
+                            badge='12'
+                            contentData={notifications}
+                            renderItems={(item, index) => renderNotificationItem(item, index)}
+                            renderFooter={() => <Link to='/comments'>View All</Link>}
+                        />
+                    }
                     {/* dropdown here */}
                 </div>
                 <div className="topnav__right-item">

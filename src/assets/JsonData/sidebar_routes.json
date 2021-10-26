@@ -33,5 +33,10 @@
         "display_name": "Roles",
         "route": "/roles",
         "icon": "bx bx-male"
+    },
+    {
+        "display_name": "Comments",
+        "route": "/comments",
+        "icon": "bx bx-comment"
     }
 ]

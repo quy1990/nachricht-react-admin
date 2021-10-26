@@ -17,7 +17,7 @@ const renderBody = (item, index) => (
     </tr>
 )
 
-const Users = () => {
+const Tags = () => {
     let url = "/tags";
 
     return (
@@ -46,4 +46,4 @@ const Users = () => {
     )
 }
 
-export default Users
+export default Tags

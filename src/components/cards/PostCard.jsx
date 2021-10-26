@@ -15,7 +15,6 @@ const PostCard = props => {
         if (!isLoad) {
             fetchData();
             setIsLoad(true);
-            console.log(bodyData.data);
         }
     }, [bodyData.data, url]);
 

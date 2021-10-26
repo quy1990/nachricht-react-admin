@@ -32,7 +32,7 @@ const Sidebar = props => {
         <div className='sidebar'>
             <div className="sidebar__logo">
                 <Link to="/">
-                    <b style={{fontSize: "xxx-large;"}}>Admin Panel</b>
+                    <b>Admin Panel</b>
                 </Link>
             </div>
             {
