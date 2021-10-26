@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import StatusCard from "../status-card/StatusCard";
 import axios from "../axios";
+import {Link} from "react-router-dom";
 
 const PostCard = props => {
     let url = 'dash-broad';
@@ -24,11 +25,13 @@ const PostCard = props => {
             {
                 bodyData.length > 0 && bodyData.map((item, index) => (
                     <div className="col-6" key={index}>
-                        <StatusCard
-                            icon={item.icon}
-                            count={item.count}
-                            title={item.title}
-                        />
+                        <Link to={item.url}>
+                            <StatusCard
+                                icon={item.icon}
+                                count={item.count}
+                                title={item.title}
+                            />
+                        </Link>
                     </div>
                 ))
             }

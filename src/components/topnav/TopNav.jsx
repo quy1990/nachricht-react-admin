@@ -82,7 +82,7 @@ const Topnav = props => {
                     {
                         notifications.length > 0 &&  <Dropdown
                             icon='bx bx-bell'
-                            badge='12'
+                            badge={notifications.length}
                             contentData={notifications}
                             renderItems={(item, index) => renderNotificationItem(item, index)}
                             renderFooter={() => <Link to='/comments'>View All</Link>}
