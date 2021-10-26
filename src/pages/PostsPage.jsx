@@ -1,11 +1,12 @@
 import React from 'react'
 import Table from '../components/table/Table'
 
-const customerTableHead = [
+const postTableHead = [
     '',
-    'name',
-    'email',
-    'post_count',
+    'title',
+    'body',
+    'author',
+    'category',
     "actions"
 ]
 
@@ -14,20 +15,20 @@ const renderHead = (item, index) => <th key={index}>{item}</th>
 const renderBody = (item, index) => (
     <tr key={index}>
         <td>{item.id}</td>
-        <td>{item.name}</td>
-        <td>{item.email}</td>
-        <td>{item.post_count}</td>
+        <td>{item.title}</td>
+        <td>{item.body}</td>
+        <td>{item.author.user_name}</td>
+        <td>{item.category.user_name}</td>
         <td>action1/action2</td>
     </tr>
 )
 
-const Users = () => {
-    let url = "/users";
-
+const PostsPage = () => {
+    let url = "/posts";
     return (
         <div>
             <h2 className="page-header">
-                users
+                posts
             </h2>
             <div className="row">
                 <div className="col-12">
@@ -36,7 +37,7 @@ const Users = () => {
                             {
                                 <Table
                                     limit='10'
-                                    headData={customerTableHead}
+                                    headData={postTableHead}
                                     renderHead={(item, index) => renderHead(item, index)}
                                     url={url}
                                     renderBody={(item, index) => renderBody(item, index)}
@@ -50,4 +51,4 @@ const Users = () => {
     )
 }
 
-export default Users
+export default PostsPage

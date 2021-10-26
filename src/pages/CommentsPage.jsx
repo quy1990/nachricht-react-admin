@@ -3,8 +3,8 @@ import Table from '../components/table/Table'
 
 const customerTableHead = [
     '',
-    'name',
-    'post_count',
+    'body',
+    'user_name',
     "actions"
 ]
 
@@ -13,15 +13,14 @@ const renderHead = (item, index) => <th key={index}>{item}</th>
 const renderBody = (item, index) => (
     <tr key={index}>
         <td>{item.id}</td>
-        <td>{item.name}</td>
-        <td>{item.post_count}</td>
+        <td>{item.body}</td>
+        <td>{item.author.user_name}</td>
         <td>action1/action2</td>
     </tr>
 )
 
-const Categories = () => {
-
-    let url = "/categories";
+const CommentsPage = () => {
+    let url = "/comments";
 
     return (
         <div>
@@ -49,4 +48,4 @@ const Categories = () => {
     )
 }
 
-export default Categories
+export default CommentsPage

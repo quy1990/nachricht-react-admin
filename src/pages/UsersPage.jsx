@@ -4,6 +4,8 @@ import Table from '../components/table/Table'
 const customerTableHead = [
     '',
     'name',
+    'email',
+    'post_count',
     "actions"
 ]
 
@@ -13,18 +15,19 @@ const renderBody = (item, index) => (
     <tr key={index}>
         <td>{item.id}</td>
         <td>{item.name}</td>
+        <td>{item.email}</td>
+        <td>{item.post_count}</td>
         <td>action1/action2</td>
     </tr>
 )
 
-const Roles = () => {
-    let url = "/roles";
-
+const UsersPage = () => {
+    let url = "/users";
 
     return (
         <div>
             <h2 className="page-header">
-                roles
+                users
             </h2>
             <div className="row">
                 <div className="col-12">
@@ -47,4 +50,4 @@ const Roles = () => {
     )
 }
 
-export default Roles
+export default UsersPage

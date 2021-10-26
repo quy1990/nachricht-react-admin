@@ -17,13 +17,14 @@ const renderBody = (item, index) => (
     </tr>
 )
 
-const Tags = () => {
-    let url = "/tags";
+const RolesPage = () => {
+    let url = "/roles";
+
 
     return (
         <div>
             <h2 className="page-header">
-                tags
+                roles
             </h2>
             <div className="row">
                 <div className="col-12">
@@ -46,4 +47,4 @@ const Tags = () => {
     )
 }
 
-export default Tags
+export default RolesPage
