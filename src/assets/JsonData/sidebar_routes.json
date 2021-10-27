@@ -38,5 +38,10 @@
         "display_name": "Comments",
         "route": "/comments",
         "icon": "bx bx-comment"
+    },
+    {
+        "display_name": "profile",
+        "route": "/profile",
+        "icon": "bx bx-comment"
     }
 ]

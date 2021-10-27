@@ -1,18 +1,22 @@
 [
     {
         "icon": "bx bx-user",
-        "content": "Profile"
+        "content": "Profile",
+        "url": "/profile"
     },
     {
         "icon": "bx bxs-detail",
-        "content": "My Posts"
+        "content": "My Posts",
+        "url": "/posts"
     },
     {
         "icon": "bx bx-cog",
-        "content": "Settings"
+        "content": "Settings",
+        "url": "/setting"
     },
     {
         "icon": "bx bx-log-out-circle bx-rotate-180",
-        "content": "Logout"
+        "content": "Logout",
+        "url": "/logout"
     }
 ]

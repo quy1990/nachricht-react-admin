@@ -1,0 +1,41 @@
+.right-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.circleImageLayout {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.right-profile__input {
+    margin-top: 50px;
+    position: relative;
+    background-color: var(--main-bg);
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.right-profile__input > input {
+    height: 100%;
+    width: 100%;
+    padding: 10px 60px 10px 20px;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    color: var(--txt-color);
+    background-color: var(--main-bg);
+}
+
+.right-profile__input > i {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 20px;
+}
+

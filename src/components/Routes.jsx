@@ -9,6 +9,7 @@ import CategoriesPage from '../pages/CategoriesPage'
 import TagsPage from '../pages/TagsPage'
 import RolesPage from '../pages/RolesPage'
 import CommentsPage from '../pages/CommentsPage'
+import UserProfilePage from '../pages/UserProfilePage'
 
 const Routes = () => {
     return (
@@ -20,6 +21,7 @@ const Routes = () => {
             <Route path='/tags' component={TagsPage}/>
             <Route path='/roles' component={RolesPage}/>
             <Route path='/comments' component={CommentsPage}/>
+            <Route path='/profile' component={UserProfilePage}/>
         </Switch>
     )
 }
