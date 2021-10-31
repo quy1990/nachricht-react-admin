@@ -15,15 +15,15 @@ import UserProfilePage from '../pages/UserProfilePage'
 const Routes = () => {
     return (
         <Switch>
-            <Route path='tags' component={TagsPage}/>
-            <Route path='users' component={UsersPage}/>
-            <Route path='posts' component={PostsPage}/>
-            <Route path='roles' component={RolesPage}/>
-            <Route path='' exact component={Dashboard}/>
-            <Route path='statuses' component={Statuses}/>
-            <Route path='comments' component={CommentsPage}/>
-            <Route path='profile' component={UserProfilePage}/>
-            <Route path='categories' component={CategoriesPage}/>
+            <Route path='/tags' component={TagsPage}/>
+            <Route path='/users' component={UsersPage}/>
+            <Route path='/posts' component={PostsPage}/>
+            <Route path='/roles' component={RolesPage}/>
+            <Route path='/' exact component={Dashboard}/>
+            <Route path='/statuses' component={Statuses}/>
+            <Route path='/comments' component={CommentsPage}/>
+            <Route path='/profile' component={UserProfilePage}/>
+            <Route path='/categories' component={CategoriesPage}/>
         </Switch>
     )
 }
