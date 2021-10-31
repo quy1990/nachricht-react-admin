@@ -2,8 +2,6 @@ import React, {useEffect, useState} from "react";
 import RightProfile from "../components/right-profile/RightProfile";
 import LeftProfile from "../components/left-profile/LeftProfile";
 import axios from "../components/axios";
-import PostsPage from "./PostsPage";
-import Table from "../components/table/Table";
 
 
 const UserProfilePage = () => {
@@ -21,6 +19,7 @@ const UserProfilePage = () => {
             setIsLoad(true);
         }
     }, [userData.data, url]);
+
     return (
         <div>
             <h2 className="page-header">Profile of User</h2>
