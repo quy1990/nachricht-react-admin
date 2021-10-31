@@ -1,17 +1,11 @@
 import React, {useEffect, useState} from 'react'
-
-import './topnav.css'
-
 import {Link} from 'react-router-dom'
-
 import Dropdown from '../dropdown/Dropdown'
-
 import ThemeMenu from '../thememenu/ThemeMenu'
-
 import user_image from '../../assets/images/tuat.png'
-
 import user_menu from '../../assets/JsonData/user_menus.json'
-import axios from "../axios";
+import AxiosInstance from "../AxiosInstance";
+import './topnav.css'
 
 const curr_user = {
     display_name: 'Tuat Tran',
@@ -47,12 +41,12 @@ const renderUserMenu = (item, index) => (
     </Link>
 )
 
-const Topnav = props => {
+const TopNav = props => {
     let url = '/latest-comments';
     const [notifications, setNotifications] = useState([]);
     const [isLoad, setIsLoad] = useState(false);
     const fetchData = async () => {
-        const request = await axios.get(url);
+        const request = await AxiosInstance.get(url);
         setNotifications(request.data);
     }
 
@@ -80,7 +74,7 @@ const Topnav = props => {
                 </div>
                 <div className="topnav__right-item">
                     {
-                        notifications.length > 0 &&  <Dropdown
+                        notifications.length > 0 && <Dropdown
                             icon='bx bx-bell'
                             badge={notifications.length}
                             contentData={notifications}
@@ -98,4 +92,4 @@ const Topnav = props => {
     )
 }
 
-export default Topnav
+export default TopNav

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import StatusCard from "../status-card/StatusCard";
-import axios from "../axios";
+import AxiosInstance from "../AxiosInstance";
 import {Link} from "react-router-dom";
 
 const PostCard = props => {
@@ -8,7 +8,7 @@ const PostCard = props => {
     const [bodyData, setBodyData] = useState([]);
     const [isLoad, setIsLoad] = useState(false);
     const fetchData = async () => {
-        const request = await axios.get(url);
+        const request = await AxiosInstance.get(url);
         setBodyData(request.data.data);
     }
 
