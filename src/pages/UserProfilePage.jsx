@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import RightProfile from "../components/right-profile/RightProfile";
 import LeftProfile from "../components/left-profile/LeftProfile";
-import axios from "../components/axios";
+import AxiosInstance from "../components/AxiosInstance";
 
 
 const UserProfilePage = () => {
@@ -9,7 +9,7 @@ const UserProfilePage = () => {
     const [userData, setUserData] = useState([]);
     const [isLoad, setIsLoad] = useState(false);
     const fetchData = async () => {
-        const request = await axios.get(url);
+        const request = await AxiosInstance.get(url);
         setUserData(request.data);
     }
 

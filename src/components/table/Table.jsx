@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react'
 import './table.css'
-import axios from "../axios";
+import AxiosInstance from "../AxiosInstance";
 
 const Table = props => {
     const [url, setUrl] = useState(props.url);
     const [bodyData, setBodyData] = useState([]);
     const [isLoad, setIsLoad] = useState(false);
     const fetchData = async () => {
-        const request = await axios.get(url);
+        const request = await AxiosInstance.get(url);
         setBodyData(request.data);
     }
 
