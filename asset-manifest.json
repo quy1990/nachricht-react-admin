@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/nachricht-react-admin/static/css/main.552afcaf.chunk.css",
-    "main.js": "/nachricht-react-admin/static/js/main.5f10845f.chunk.js",
-    "main.js.map": "/nachricht-react-admin/static/js/main.5f10845f.chunk.js.map",
-    "runtime-main.js": "/nachricht-react-admin/static/js/runtime-main.32005e50.js",
-    "runtime-main.js.map": "/nachricht-react-admin/static/js/runtime-main.32005e50.js.map",
-    "static/js/2.910ffae2.chunk.js": "/nachricht-react-admin/static/js/2.910ffae2.chunk.js",
-    "static/js/2.910ffae2.chunk.js.map": "/nachricht-react-admin/static/js/2.910ffae2.chunk.js.map",
-    "static/js/3.5afd02b6.chunk.js": "/nachricht-react-admin/static/js/3.5afd02b6.chunk.js",
-    "static/js/3.5afd02b6.chunk.js.map": "/nachricht-react-admin/static/js/3.5afd02b6.chunk.js.map",
-    "index.html": "/nachricht-react-admin/index.html",
-    "static/css/main.552afcaf.chunk.css.map": "/nachricht-react-admin/static/css/main.552afcaf.chunk.css.map",
-    "static/js/2.910ffae2.chunk.js.LICENSE.txt": "/nachricht-react-admin/static/js/2.910ffae2.chunk.js.LICENSE.txt",
-    "static/media/boxicons.min.css": "/nachricht-react-admin/static/media/boxicons.cbd149c5.ttf",
-    "static/media/logo.ef7bfcda.png": "/nachricht-react-admin/static/media/logo.ef7bfcda.png",
-    "static/media/tuat.7ec76cec.png": "/nachricht-react-admin/static/media/tuat.7ec76cec.png"
+    "main.css": "/static/css/main.0900d25f.chunk.css",
+    "main.js": "/static/js/main.5f10845f.chunk.js",
+    "main.js.map": "/static/js/main.5f10845f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b79a87ae.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b79a87ae.js.map",
+    "static/js/2.910ffae2.chunk.js": "/static/js/2.910ffae2.chunk.js",
+    "static/js/2.910ffae2.chunk.js.map": "/static/js/2.910ffae2.chunk.js.map",
+    "static/js/3.5afd02b6.chunk.js": "/static/js/3.5afd02b6.chunk.js",
+    "static/js/3.5afd02b6.chunk.js.map": "/static/js/3.5afd02b6.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.0900d25f.chunk.css.map": "/static/css/main.0900d25f.chunk.css.map",
+    "static/js/2.910ffae2.chunk.js.LICENSE.txt": "/static/js/2.910ffae2.chunk.js.LICENSE.txt",
+    "static/media/boxicons.min.css": "/static/media/boxicons.cbd149c5.ttf",
+    "static/media/logo.ef7bfcda.png": "/static/media/logo.ef7bfcda.png",
+    "static/media/tuat.7ec76cec.png": "/static/media/tuat.7ec76cec.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.32005e50.js",
+    "static/js/runtime-main.b79a87ae.js",
     "static/js/2.910ffae2.chunk.js",
-    "static/css/main.552afcaf.chunk.css",
+    "static/css/main.0900d25f.chunk.css",
     "static/js/main.5f10845f.chunk.js"
   ]
 }
