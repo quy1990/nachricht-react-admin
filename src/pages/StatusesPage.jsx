@@ -1,5 +1,6 @@
 import React from 'react'
 import Table from '../components/table/Table'
+import Badge from "../components/badge/Badge";
 
 const customerTableHead = [
     '',
@@ -7,12 +8,21 @@ const customerTableHead = [
     "actions"
 ]
 
+const orderStatus = {
+    "shipping": "primary",
+    "pending": "warning",
+    "paid": "success",
+    "refund": "danger"
+}
+
 const renderHead = (item, index) => <th key={index}>{item}</th>
 
 const renderBody = (item, index) => (
     <tr key={index}>
         <td>{item.id}</td>
-        <td>{item.name}</td>
+        <td>
+            <Badge type={orderStatus[item.name]} content={item.name}/>
+        </td>
         <td>action1/action2</td>
     </tr>
 )

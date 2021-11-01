@@ -1,52 +1,52 @@
 [
     {
         "display_name": "Dashboard",
-        "route": "/",
+        "route": "/nachricht-react-admin/",
         "icon": "bx bx-category-alt"
     },
     {
         "display_name": "Tags",
-        "route": "/tags",
+        "route": "/nachricht-react-admin/tags",
         "icon": "bx bx-tag"
     },
     {
         "display_name": "Posts",
-        "route": "/posts",
+        "route": "/nachricht-react-admin/posts",
         "icon": "bx bxs-detail"
     },
     {
         "display_name": "Users",
-        "route": "/users",
+        "route": "/nachricht-react-admin/users",
         "icon": "bx bx-user"
     },
     {
         "display_name": "categories",
-        "route": "/categories",
+        "route": "/nachricht-react-admin/categories",
         "icon": "bx bx-list-ol"
     },
     {
         "display_name": "Emails",
-        "route": "/emails",
+        "route": "/nachricht-react-admin/emails",
         "icon": "bx bx-mail-send"
     },
     {
         "display_name": "Roles",
-        "route": "/roles",
+        "route": "/nachricht-react-admin/roles",
         "icon": "bx bx-male"
     },
     {
         "display_name": "Comments",
-        "route": "/comments",
+        "route": "/nachricht-react-admin/comments",
         "icon": "bx bx-comment"
     },
     {
         "display_name": "Statuses",
-        "route": "/statuses",
+        "route": "/nachricht-react-admin/statuses",
         "icon": "bx bx-bell"
     },
     {
         "display_name": "profile",
-        "route": "/profile",
+        "route": "/nachricht-react-admin/profile",
         "icon": "bx bx-comment"
     }
 ]
