@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/nachricht-react-admin/static/css/main.552afcaf.chunk.css",
-    "main.js": "/nachricht-react-admin/static/js/main.3707c440.chunk.js",
-    "main.js.map": "/nachricht-react-admin/static/js/main.3707c440.chunk.js.map",
+    "main.js": "/nachricht-react-admin/static/js/main.7bdd0378.chunk.js",
+    "main.js.map": "/nachricht-react-admin/static/js/main.7bdd0378.chunk.js.map",
     "runtime-main.js": "/nachricht-react-admin/static/js/runtime-main.0d0e1b7a.js",
     "runtime-main.js.map": "/nachricht-react-admin/static/js/runtime-main.0d0e1b7a.js.map",
     "static/js/2.dd992b45.chunk.js": "/nachricht-react-admin/static/js/2.dd992b45.chunk.js",
@@ -13,13 +13,12 @@
     "static/css/main.552afcaf.chunk.css.map": "/nachricht-react-admin/static/css/main.552afcaf.chunk.css.map",
     "static/js/2.dd992b45.chunk.js.LICENSE.txt": "/nachricht-react-admin/static/js/2.dd992b45.chunk.js.LICENSE.txt",
     "static/media/boxicons.min.css": "/nachricht-react-admin/static/media/boxicons.cbd149c5.ttf",
-    "static/media/logo.ef7bfcda.png": "/nachricht-react-admin/static/media/logo.ef7bfcda.png",
     "static/media/tuat.7ec76cec.png": "/nachricht-react-admin/static/media/tuat.7ec76cec.png"
   },
   "entrypoints": [
     "static/js/runtime-main.0d0e1b7a.js",
     "static/js/2.dd992b45.chunk.js",
     "static/css/main.552afcaf.chunk.css",
-    "static/js/main.3707c440.chunk.js"
+    "static/js/main.7bdd0378.chunk.js"
   ]
 }
