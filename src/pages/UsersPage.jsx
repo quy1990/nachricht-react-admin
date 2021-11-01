@@ -1,12 +1,14 @@
 import React from 'react'
 import Table from '../components/table/Table'
 
+import Button from "@material-ui/core/Button";
+
 const customerTableHead = [
     '',
     'name',
     'email',
     'post_count',
-    "actions"
+    ''
 ]
 
 const renderHead = (item, index) => <th key={index}>{item}</th>
@@ -17,7 +19,13 @@ const renderBody = (item, index) => (
         <td>{item.name}</td>
         <td>{item.email}</td>
         <td>{item.post_count}</td>
-        <td>action1/action2</td>
+        <td align={"right"}>
+            <Button color="primary" variant="contained">
+                Edit
+            </Button>/
+            <Button color="secondary" variant="contained">
+                Delete
+            </Button></td>
     </tr>
 )
 

@@ -3,7 +3,6 @@ import RightProfile from "../components/right-profile/RightProfile";
 import LeftProfile from "../components/left-profile/LeftProfile";
 import AxiosInstance from "../components/AxiosInstance";
 
-
 const UserProfilePage = () => {
     let url = '/users/1';
     const [userData, setUserData] = useState([]);

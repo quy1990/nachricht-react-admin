@@ -25,11 +25,6 @@
         "icon": "bx bx-list-ol"
     },
     {
-        "display_name": "Emails",
-        "route": "/nachricht-react-admin/emails",
-        "icon": "bx bx-mail-send"
-    },
-    {
         "display_name": "Roles",
         "route": "/nachricht-react-admin/roles",
         "icon": "bx bx-male"

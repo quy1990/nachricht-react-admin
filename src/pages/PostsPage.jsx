@@ -1,5 +1,6 @@
 import React from 'react'
 import Table from '../components/table/Table'
+import Button from "@material-ui/core/Button";
 
 const postTableHead = [
     '',
@@ -7,7 +8,7 @@ const postTableHead = [
     'body',
     'author',
     'category',
-    "actions"
+    ''
 ]
 
 const renderHead = (item, index) => <th key={index}>{item}</th>
@@ -19,7 +20,13 @@ const renderBody = (item, index) => (
         <td>{item.body}</td>
         <td>{item.author.user_name}</td>
         <td>{item.category.user_name}</td>
-        <td>action1/action2</td>
+        <td align={"right"}>
+            <Button color="primary" variant="contained">
+                Edit
+            </Button>/
+            <Button color="secondary" variant="contained">
+                Delete
+            </Button></td>
     </tr>
 )
 
