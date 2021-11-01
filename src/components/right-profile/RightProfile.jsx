@@ -1,5 +1,5 @@
 import React from 'react'
-import user_image from '../../assets/images/tuat.png'
+import user_image from '../../assets/images/avata.jfif'
 
 import './RightProfile.css'
 

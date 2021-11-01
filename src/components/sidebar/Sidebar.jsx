@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import './sidebar.css'
 import sidebar_menu from '../../assets/JsonData/sidebar_menu.json'
 import SidebarItem from "./SidebarItem";
+import user_image from "../../assets/images/avata.jfif";
 
 const Sidebar = props => {
     const activeItem = sidebar_menu.findIndex(item => item.route === props.location.pathname)
@@ -11,7 +12,7 @@ const Sidebar = props => {
         <div className='sidebar'>
             <div className="sidebar__logo">
                 <Link to="/">
-                    <b>Admin Panel</b>
+                    <img src={user_image} className="circleImageLayout" alt="avatar"/>
                 </Link>
             </div>
             {

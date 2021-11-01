@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import Dropdown from '../dropdown/Dropdown'
 import ThemeMenu from '../thememenu/ThemeMenu'
-import user_image from '../../assets/images/tuat.png'
+import user_image from '../../assets/images/avata.jfif'
 import user_menu from '../../assets/JsonData/user_menus.json'
 import AxiosInstance from "../AxiosInstance";
 import './topnav.css'
