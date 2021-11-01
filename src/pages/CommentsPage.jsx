@@ -25,7 +25,7 @@ const CommentsPage = () => {
     return (
         <div>
             <h2 className="page-header">
-                categories
+                Comments
             </h2>
             <div className="row">
                 <div className="col-12">

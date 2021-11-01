@@ -1,10 +1,8 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 import './sidebar.css'
-
-import logo from '../../assets/images/logo.png'
 
 import sidebar_items from '../../assets/JsonData/sidebar_routes.json'
 
@@ -25,7 +23,6 @@ const SidebarItem = props => {
 }
 
 const Sidebar = props => {
-
     const activeItem = sidebar_items.findIndex(item => item.route === props.location.pathname)
 
     return (
