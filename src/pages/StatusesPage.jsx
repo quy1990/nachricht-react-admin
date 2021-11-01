@@ -1,11 +1,11 @@
 import React from 'react'
 import Table from '../components/table/Table'
 import Badge from "../components/badge/Badge";
+import Button from "@material-ui/core/Button";
 
 const customerTableHead = [
     '',
-    'name',
-    "actions"
+    'name'
 ]
 
 const orderStatus = {
@@ -20,10 +20,14 @@ const renderHead = (item, index) => <th key={index}>{item}</th>
 const renderBody = (item, index) => (
     <tr key={index}>
         <td>{item.id}</td>
-        <td>
-            <Badge type={orderStatus[item.name]} content={item.name}/>
-        </td>
-        <td>action1/action2</td>
+        <td><Badge type={orderStatus[item.name]} content={item.name}/></td>
+        <td align={"right"}>
+            <Button color="primary" variant="contained">
+                Edit
+            </Button>/
+            <Button color="secondary" variant="contained">
+            Delete
+        </Button></td>
     </tr>
 )
 
