@@ -1,12 +1,23 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import './sidebar.css'
-import sidebar_menu from '../../assets/JsonData/sidebar_menu.json'
 import SidebarItem from "./SidebarItem";
 import user_image from "../../assets/images/avata.jfif";
+import AxiosInstance from "../AxiosInstance";
 
 const Sidebar = props => {
-    const activeItem = sidebar_menu.findIndex(item => item.route === props.location.pathname)
+    const url = '/menus';
+    const [menus, setMenus] = useState([]);
+    const fetchData = async () => {
+        const request = await AxiosInstance.get(url);
+        setMenus(request.data);
+    }
+
+    useEffect(() => {
+        fetchData();
+    }, [setMenus]);
+
+    const activeItem = menus && menus.findIndex(item => item.route === props.location.pathname);
 
     return (
         <div className='sidebar'>
@@ -16,10 +27,10 @@ const Sidebar = props => {
                 </Link>
             </div>
             {
-                sidebar_menu.map((item, index) => (
+                menus && menus.map((item, index) => (
                     <Link to={item.route} key={index}>
                         <SidebarItem
-                            title={item.display_name}
+                            title={item.name}
                             icon={item.icon}
                             active={index === activeItem}
                         />

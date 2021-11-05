@@ -1,46 +1,46 @@
 [
     {
-        "display_name": "Dashboard",
+        "name": "Dashboard",
         "route": "/nachricht-react-admin/",
         "icon": "bx bx-category-alt"
     },
     {
-        "display_name": "Tags",
+        "name": "Tags",
         "route": "/nachricht-react-admin/tags",
         "icon": "bx bx-tag"
     },
     {
-        "display_name": "Posts",
+        "name": "Posts",
         "route": "/nachricht-react-admin/posts",
         "icon": "bx bxs-detail"
     },
     {
-        "display_name": "Users",
+        "name": "Users",
         "route": "/nachricht-react-admin/users",
         "icon": "bx bx-user"
     },
     {
-        "display_name": "categories",
+        "name": "categories",
         "route": "/nachricht-react-admin/categories",
         "icon": "bx bx-list-ol"
     },
     {
-        "display_name": "Roles",
+        "name": "Roles",
         "route": "/nachricht-react-admin/roles",
         "icon": "bx bx-male"
     },
     {
-        "display_name": "Comments",
+        "name": "Comments",
         "route": "/nachricht-react-admin/comments",
         "icon": "bx bx-comment"
     },
     {
-        "display_name": "Statuses",
+        "name": "Statuses",
         "route": "/nachricht-react-admin/statuses",
         "icon": "bx bx-bell"
     },
     {
-        "display_name": "profile",
+        "name": "profile",
         "route": "/nachricht-react-admin/profile",
         "icon": "bx bx-comment"
     }
