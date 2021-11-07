@@ -10,14 +10,15 @@ const Sidebar = props => {
     const [menus, setMenus] = useState([]);
     const fetchData = async () => {
         const request = await AxiosInstance.get(url);
-        setMenus(request.data);
+        setMenus(request.data.data);
+        console.log(request.data.data);
     }
 
     useEffect(() => {
         fetchData();
     }, [setMenus]);
 
-    const activeItem = menus && menus.findIndex(item => item.route === props.location.pathname);
+    const activeItem = menus.length > 0 && menus.findIndex(item => item.route === props.location.pathname);
 
     return (
         <div className='sidebar'>
@@ -27,7 +28,7 @@ const Sidebar = props => {
                 </Link>
             </div>
             {
-                menus && menus.map((item, index) => (
+                menus.length > 0 && menus.map((item, index) => (
                     <Link to={item.route} key={index}>
                         <SidebarItem
                             title={item.name}
