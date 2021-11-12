@@ -11,7 +11,6 @@ const Sidebar = props => {
     const fetchData = async () => {
         const request = await AxiosInstance.get(url);
         setMenus(request.data.data);
-        console.log(request.data.data);
     }
 
     useEffect(() => {
