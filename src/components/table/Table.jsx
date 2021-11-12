@@ -1,11 +1,18 @@
 import React, {useEffect, useState} from 'react'
 import './table.css'
 import AxiosInstance from "../AxiosInstance";
+import StatusPopup from "../Popups/StatusPopup";
+import Button from "@material-ui/core/Button";
 
 const Table = props => {
     const [url, setUrl] = useState(props.url);
     const [bodyData, setBodyData] = useState([]);
+    const [isOpen, setIsOpen] = useState(false);
     const [isLoad, setIsLoad] = useState(false);
+
+    const togglePopup = () => {
+        setIsOpen(!isOpen);
+    }
     const fetchData = async () => {
         const request = await AxiosInstance.get(url);
         setBodyData(request.data);
@@ -20,7 +27,6 @@ const Table = props => {
 
     const selectPage = item => {
         setUrl(item.url);
-        setIsLoad(false);
     }
 
     return (
@@ -64,6 +70,25 @@ const Table = props => {
                         }
                     </div>) : null
             }
+
+            {isOpen && <StatusPopup
+                content={<>
+                    <div className="popup_body">
+                        <b>Edit Status</b>
+                        <br/>
+                        <br/>
+                        <div>
+                            <div className="left-profile__search">
+                                <i className='bx bx-user'></i>
+                                <input type="text" placeholder='username' value="" name='name'/>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <Button color="primary" variant="contained" className="bx-align-left" onClick="">Edit</Button>
+                </>}
+                handleClose={togglePopup}
+            />}
         </div>
     )
 }

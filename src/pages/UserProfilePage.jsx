@@ -6,17 +6,13 @@ import AxiosInstance from "../components/AxiosInstance";
 const UserProfilePage = () => {
     let url = '/users/1';
     const [userData, setUserData] = useState([]);
-    const [isLoad, setIsLoad] = useState(false);
     const fetchData = async () => {
         const request = await AxiosInstance.get(url);
         setUserData(request.data);
     }
 
     useEffect(() => {
-        if (!isLoad) {
-            fetchData();
-            setIsLoad(true);
-        }
+        fetchData();
     }, [userData.data, url]);
 
     return (

@@ -20,10 +20,8 @@ const LeftProfile = prop => {
                 <div className="row">
                     <div className="col-6">
                         <div className="left-profile__search">
-                            username:
                             <i className='bx bx-user'></i>
-                            <input type="text" placeholder='username' value={name}
-                                   onChange={(e) => setName(e.target.value)}/>
+                            <input type="text" placeholder='username' value={prop?.userData?.data?.name ?? ''} onChange={(e) => setName(e.target.value)}/>
                         </div>
                     </div>
                     <div className="col-6">
