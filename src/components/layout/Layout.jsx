@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 
 import './layout.css'
 
@@ -13,7 +13,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import ThemeAction from '../../redux/actions/ThemeAction'
 
 const Layout = () => {
-
     const themeReducer = useSelector(state => state.ThemeReducer)
 
     const dispatch = useDispatch()
