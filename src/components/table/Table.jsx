@@ -58,7 +58,8 @@ const Table = props => {
                                 <div key={index}
                                      className={`table__pagination-item ${item.active === true ? 'active' : ''}`}
                                      onClick={() => selectPage(item)}>
-                                    {item.label}
+                                    {!isNaN(item.label) ? item.label :
+                                        (item.label === '&laquo; Previous' ? "<< " : " >>")}
                                 </div>
                             ))
                         }
