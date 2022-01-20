@@ -63,8 +63,7 @@
 }
 
 .topnav__right-user__image {
-    width: 40px;
-    height: 40px;
+    width: 100px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 10px;
@@ -77,4 +76,8 @@
 .topnav__right-user__name {
     font-size: 1rem;
     font-weight: 600;
+}
+
+.notification-item a i {
+    margin-right: 10px;
 }

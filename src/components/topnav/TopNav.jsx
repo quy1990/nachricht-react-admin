@@ -2,43 +2,15 @@ import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import Dropdown from '../dropdown/Dropdown'
 import ThemeMenu from '../thememenu/ThemeMenu'
-import user_image from '../../assets/images/avata.jfif'
-import user_menu from '../../assets/JsonData/user_menus.json'
 import AxiosInstance from "../AxiosInstance";
 import './topnav.css'
-
-const curr_user = {
-    display_name: 'Tuat Tran',
-    image: user_image
-}
+import TopNavUserProfile from "./TopNavUserProfile";
 
 const renderNotificationItem = (item, index) => (
     <div className="notification-item" key={index}>
         <i className={item.icon}></i>
         <span>{item.content}</span>
     </div>
-)
-
-const renderUserToggle = (user) => (
-    <div className="topnav__right-user">
-        <div className="topnav__right-user__image">
-            <img src={user.image} alt=""/>
-        </div>
-        <div className="topnav__right-user__name">
-            {user.display_name}
-        </div>
-    </div>
-)
-
-const renderUserMenu = (item, index) => (
-    <Link to='/' key={index}>
-        <div className="notification-item">
-            <Link to={item.url}>
-                <i className={item.icon}></i>
-                <span>{item.content}</span>
-            </Link>
-        </div>
-    </Link>
 )
 
 const TopNav = props => {
@@ -65,12 +37,7 @@ const TopNav = props => {
             </div>
             <div className="topnav__right">
                 <div className="topnav__right-item">
-                    {/* dropdown here */}
-                    <Dropdown
-                        customToggle={() => renderUserToggle(curr_user)}
-                        contentData={user_menu}
-                        renderItems={(item, index) => renderUserMenu(item, index)}
-                    />
+                    <TopNavUserProfile/>
                 </div>
                 <div className="topnav__right-item">
                     {
@@ -82,7 +49,6 @@ const TopNav = props => {
                             renderFooter={() => <Link to='/comments'>View All</Link>}
                         />
                     }
-                    {/* dropdown here */}
                 </div>
                 <div className="topnav__right-item">
                     <ThemeMenu/>
