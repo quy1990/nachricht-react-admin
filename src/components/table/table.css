@@ -64,3 +64,6 @@ tbody > tr:hover {
 tr:nth-child(even) {
     background: #2d3034
 }
+
+td:first-child{ width: 10px; }
+td:last-child{ width: 70px; }
