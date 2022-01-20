@@ -4,7 +4,7 @@ import LeftProfile from "../components/left-profile/LeftProfile";
 import AxiosInstance from "../components/AxiosInstance";
 
 const UserProfilePage = () => {
-    let url = '/users/1';
+    let url = '/auth/user-profile';
     const [userData, setUserData] = useState([]);
     const [isLoad, setIsLoad] = useState(false);
     const fetchData = async () => {
