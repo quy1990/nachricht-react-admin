@@ -1,9 +1,8 @@
 import React from 'react'
 import Table from '../components/table/Table'
 
-import Button from "@material-ui/core/Button";
 const customerTableHead = [
-    '',
+    '#',
     'name',
     ''
 ]
@@ -15,12 +14,9 @@ const renderBody = (item, index) => (
         <td>{item.id}</td>
         <td>{item.name}</td>
         <td align={"right"}>
-            <Button color="primary" variant="contained">
-                Edit
-            </Button>/
-            <Button color="secondary" variant="contained">
-                Delete
-            </Button></td>
+            <i className='bx bx-edit-alt'></i> <i className='bx bx-trash'></i>
+        </td>
+
     </tr>
 )
 

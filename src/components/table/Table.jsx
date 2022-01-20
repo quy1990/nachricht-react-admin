@@ -8,7 +8,7 @@ const Table = props => {
     const [isLoad, setIsLoad] = useState(false);
     const fetchData = async () => {
         const request = await AxiosInstance.get(url);
-        setBodyData(request.data.data);
+        setBodyData(request.data);
     }
 
     useEffect(() => {
