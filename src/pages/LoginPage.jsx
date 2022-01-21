@@ -2,10 +2,10 @@ import React from 'react'
 import Login from '../components/login/Login'
 
 
-const LoginPage = () => {
+const LoginPage = (props) => {
     return (
         <div>
-            <Login/>
+            <Login props={props}/>
         </div>
     )
 }

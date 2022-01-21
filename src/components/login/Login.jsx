@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import './Login.css'
-import {useHistory} from "react-router-dom";
+import './Login.css';
 
 
 async function loginUser(credentials) {
@@ -20,20 +19,25 @@ function setAuth(token) {
 }
 
 
-const Login = () => {
+const Login = (props) => {
     const [email, setEmail] = useState('abc@skdjsk.com');
     const [token, setToken] = useState(localStorage.getItem('access_token'));
     const [password, setPassword] = useState('123admin');
-    const history = useHistory();
 
-    const handleSubmit = async e => {
-        e.preventDefault();
-        const token = await loginUser({
-            email,
-            password
-        });
-        setAuth(token);
-        setToken(token)
+
+    const handleSubmit = async event => {
+        event.preventDefault();
+        try {
+            const token = await loginUser({
+                email,
+                password
+            });
+            setAuth(token);
+            setToken(token);
+            window.location.href = "/nachricht-react-admin";
+        } catch (e) {
+            alert(e.message);
+        }
     }
 
     return (
