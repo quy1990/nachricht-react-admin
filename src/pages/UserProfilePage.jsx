@@ -23,10 +23,10 @@ const UserProfilePage = () => {
         <div>
             <h2 className="page-header">Profile of User</h2>
             <div className="row">
-                <div className="col-6">
+                <div className="col-7">
                     <LeftProfile userData={userData}/>
                 </div>
-                <div className="col-6">
+                <div className="col-5">
                     <RightProfile userData={userData}/>
                 </div>
             </div>

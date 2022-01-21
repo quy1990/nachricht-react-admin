@@ -1,6 +1,5 @@
 import React from 'react'
 import Table from '../components/table/Table'
-import Button from "@material-ui/core/Button";
 
 const postTableHead = [
     '#',
