@@ -4,12 +4,11 @@ import Dropdown from '../dropdown/Dropdown'
 import user_menu from '../../assets/JsonData/user_menus.json'
 import AxiosInstance from "../AxiosInstance";
 import './topnav.css'
+import Avatar from "../avatar/Avatar";
 
 const renderUserToggle = (user) => (
     <div className="topnav__right-user">
-        <div className="topnav__right-user__image">
-            <img src={user.avatar} alt=""/>
-        </div>
+        <Avatar/>
         <div className="topnav__right-user__name">
             {user.name}
         </div>

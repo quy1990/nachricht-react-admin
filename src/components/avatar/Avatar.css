@@ -1,0 +1,12 @@
+.topnav__right-user {
+    display: flex;
+    align-items: center;
+}
+
+.topnav__right-user__avatar > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 5px;
+}

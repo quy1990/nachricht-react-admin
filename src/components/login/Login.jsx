@@ -41,7 +41,7 @@ const Login = (props) => {
     }
 
     return (
-        <div className="body">
+        <div className="login_body">
             <div className="main">
                 <input type="checkbox" id="chk" aria-hidden="true"/>
                 <div className="signup">
@@ -50,7 +50,7 @@ const Login = (props) => {
                         <input type="text" name="txt" placeholder="User name" required=""/>
                         <input type="email" name="email" placeholder="Email" required=""/>
                         <input type="password" name="pswd" placeholder="Password" required=""/>
-                        <button>Sign up</button>
+                        <button className="login_body_signup_button__signup">Sign up</button>
                     </form>
                 </div>
 

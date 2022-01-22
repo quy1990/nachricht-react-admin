@@ -4,13 +4,13 @@ import './RightProfile.css'
 import AxiosInstance from "../AxiosInstance";
 
 const RightProfile = prop => {
-    const url = 'auth/avatar';
+    const avatarUrl = 'auth/avatar';
     const [avatar, setAvatar] = useState('');
     const [isLoad, setIsLoad] = useState(false);
     const [selectedFile, setSelectedFile] = useState();
 
     const getAvatar = async () => {
-        const request = await AxiosInstance.get(url);
+        const request = await AxiosInstance.get(avatarUrl);
         setAvatar(request.data.data);
     }
 
@@ -19,7 +19,7 @@ const RightProfile = prop => {
             getAvatar();
             setIsLoad(true);
         }
-    }, [avatar, url]);
+    }, [avatar, avatarUrl]);
 
     const changeHandler = (event) => {
         setSelectedFile(URL.createObjectURL(event.target.files[0]));
@@ -30,7 +30,7 @@ const RightProfile = prop => {
         const fromData = new FormData();
         fromData.append('avatar', avatar);
         avatar && await AxiosInstance
-            .post(url, fromData, {
+            .post(avatarUrl, fromData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
