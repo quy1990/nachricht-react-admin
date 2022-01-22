@@ -21,7 +21,6 @@ const LeftProfile = prop => {
         setCity(prop.userData.city ?? '');
         setCountry(prop.userData.country ?? '');
         setCompany(prop.userData.company ?? '');
-        console.log(prop.userData);
     }, [prop.userData]);
 
     return (
