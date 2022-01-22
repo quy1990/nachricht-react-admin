@@ -50,7 +50,7 @@ const Login = (props) => {
                         <input type="text" name="txt" placeholder="User name" required=""/>
                         <input type="email" name="email" placeholder="Email" required=""/>
                         <input type="password" name="pswd" placeholder="Password" required=""/>
-                        <button className="login_body_signup_button__signup">Sign up</button>
+                        <button>Sign up</button>
                     </form>
                 </div>
 
