@@ -29,7 +29,7 @@ const renderBody = (item, index) => (
         <td>{item.author.user_name}</td>
         <td>{item.category.user_name}</td>
         <td>
-            <Badge type={orderStatus[item.status]} content={item.status}/>
+            <Badge type={orderStatus[item.status.status_name]} content={item.status.status_name}/>
         </td>
     </tr>
 )

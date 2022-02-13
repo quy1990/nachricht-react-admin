@@ -1,6 +1,11 @@
-import React from 'react'
-import Table from '../components/table/Table'
-import Button from "@material-ui/core/Button";
+import React, {useState} from 'react'
+import Table from '../components/table/Table';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 const customerTableHead = [
     '#',
@@ -10,8 +15,41 @@ const customerTableHead = [
 
 const renderHead = (item, index) => <th key={index}>{item}</th>
 
+const Dialog1 = (item) => {
+    const [open, setOpen] = useState(true);
+
+    const handleClose = () => {
+        //setOpen(false);
+    };
+
+    return (
+        <Dialog
+            open={true}
+            onClose={handleClose}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+        >
+            <DialogTitle id="alert-dialog-title">
+                {"Use Google's location service?"}
+            </DialogTitle>
+            <DialogContent>
+                <DialogContentText id="alert-dialog-description">
+                    Let Google help apps determine location. This means sending anonymous
+                    location data to Google, even when no apps are running.
+                </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+                <Button onClick={handleClose}>Disagree</Button>
+                <Button onClick={handleClose} autoFocus>
+                    Agree
+                </Button>
+            </DialogActions>
+        </Dialog>
+    )
+}
+
 const renderBody = (item, index) => (
-    <tr key={index}>
+    <tr key={index} onClick={() => Dialog1(item)}>
         <td>{item.id}</td>
         <td>{item.name}</td>
         <td align={"right"}>
